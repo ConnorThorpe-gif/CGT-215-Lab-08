@@ -1,4 +1,4 @@
-// BalloonBuster.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Lab08.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 
@@ -41,7 +41,7 @@ Vector2f GetTextSize(Text text) {
 
 int main()
 {
-    RenderWindow window(VideoMode(800, 600), "Balloon Buster");
+    RenderWindow window(VideoMode(800, 600), "Duck Hunter");
     World world(Vector2f(0, 0));
     int score(0);
     int arrows(1);
