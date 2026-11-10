@@ -44,7 +44,7 @@ int main()
     RenderWindow window(VideoMode(800, 600), "Duck Hunter");
     World world(Vector2f(0, 0));
     int score(0);
-    int arrows(1);
+    int arrows(5); // Player starts with 5 arrows
 
     SoundBuffer popBuffer;
     if (!popBuffer.loadFromFile("balloonpop.ogg")) {
@@ -163,11 +163,12 @@ int main()
             Text scoreText;
             scoreText.setString(to_string(score));
             scoreText.setFont(fnt);
+            scoreText.setPosition(Vector2f(790 - GetTextSize(scoreText).x, 550));
             window.draw(scoreText);
             Text arrowCountText;
             arrowCountText.setString(to_string(arrows));
             arrowCountText.setFont(fnt);
-            arrowCountText.setPosition(Vector2f(790 - GetTextSize(arrowCountText).x, 0));
+            arrowCountText.setPosition(Vector2f(10, 550));
             window.draw(arrowCountText);
             //world.VisualizeAllBounds(window);
 
