@@ -129,8 +129,8 @@ int main()
             lastTime = currentTime;
             duckMS = duckMS + deltaMS;
 
-            // Spawn a duck every 1.5 seconds
-            if (duckMS > 1500) {
+            // Spawn a duck every .3 seconds
+            if (duckMS > 300) {
                 duckMS = 0;
 
                 PhysicsSprite& duck = ducks.Create();
