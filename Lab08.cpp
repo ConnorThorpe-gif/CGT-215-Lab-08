@@ -129,15 +129,15 @@ int main()
             lastTime = currentTime;
             duckMS = duckMS + deltaMS;
 
-            // Spawn a duck every .3 seconds
-            if (duckMS > 300) {
+            // Spawn a duck every .5 seconds
+            if (duckMS > 500) {
                 duckMS = 0;
 
                 PhysicsSprite& duck = ducks.Create();
                 duck.setTexture(duckTex);
                 Vector2f sz = duck.getSize();
                 duck.setCenter(Vector2f(-sz.x / 2, 20 + (sz.y / 2)));
-                duck.setVelocity(Vector2f(0.25, 0));
+                duck.setVelocity(Vector2f(0.4, 0));
                 world.AddPhysicsBody(duck);
 
                 duck.onCollision =
